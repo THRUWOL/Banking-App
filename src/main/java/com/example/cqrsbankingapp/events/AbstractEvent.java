@@ -36,7 +36,7 @@ public abstract class AbstractEvent implements Event{
     @Convert(converter = ObjectConverter.class)
     private Object payload;
 
-    public AbstractEvent(UUID aggregateId, EventType type, Object payload) {
+    protected AbstractEvent(UUID aggregateId, EventType type, Object payload) {
         this.aggregateId = aggregateId;
         this.type = type;
         this.payload = payload;
